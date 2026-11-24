@@ -21,7 +21,7 @@ DESCRIPTION = (
     "heating, with projects published in full as public repositories."
 )
 
-NAV = [("experience", "Experience"), ("projects", "Projects"), ("path", "Path"),
+NAV = [("experience", "Experience"), ("projects", "Projects"), ("path", "Four years"),
        ("awards", "Awards"), ("contact", "Contact")]
 
 # ---------------------------------------------------------------- hero
@@ -243,16 +243,19 @@ OTHER_WORK = (
 )
 
 # ---------------------------------------------------------------- path
+PATH_TITLE = "Four years at RVCE"
+
 PATH_TEXT = [
-    "I came to aerospace the long way round. My first year after school was lost to COVID. I spent "
-    "2020–21 teaching mathematics to students from Grades 1 to 10 at Sidda Samadhi Yoga Gurukul, and "
-    "2021–22 training for mathematics competitions. I then started physics degrees at SRM and at "
-    "Manipal and left both, because what I wanted was aerospace. In 2023 I joined the aerospace "
-    "engineering programme at RV College of Engineering.",
-    "Since then I have tried a little of everything an aerospace engineer does: engineering drawing "
-    "and CAD, a propeller and its test bench, the engine of a Formula Student car, avionics, and the "
-    "computational work that led to research internships at DRDO and CSIR–NAL. In November 2026 I "
-    "started putting all of it online, so that anyone can check it.",
+    "My four years at RVCE have taken the work steadily deeper. In the first year I learnt to draw and "
+    "model parts, and built a quadcopter and a fixed-wing aircraft with classmates. In the second I built "
+    "hardware that had to work on a bench, a variable-pitch propeller and its thrust stand, and joined the "
+    "engine subsystem of our Formula Student team.",
+    "In the third year I moved to simulation: hypersonic stagnation heating at DRDO, then shocks over a "
+    "rough double wedge, a rotating porous deaerator, the dynamics of CubeSat docking, radar scattering "
+    "from aircraft shapes and satellite conjunction screening in my sixth-semester projects.",
+    "In the fourth I went to the methods underneath. At CSIR–NAL I wrote finite-difference solvers from "
+    "the discretisation up and learnt to predict a scheme’s error before measuring it. Since November "
+    "2026 I have been publishing every project in full, including what went wrong.",
 ]
 
 PATH_BEYOND = (
@@ -262,33 +265,33 @@ PATH_BEYOND = (
 )
 
 YEARS = [
-    ("Before RVCE", "2020–23", [
+    ("Before RVCE", "2020–23", "Teaching and mathematics", [
         ("2020–21", "Taught mathematics to Grades 1–10 at Sidda Samadhi Yoga Gurukul"),
         ("2021–22", "Trained for mathematics competitions"),
         ("", "Started physics at SRM and at Manipal; left both for aerospace"),
         ("2023", "Master Certificate in Product Design, CADD Centre: AutoCAD, CATIA, Ansys"),
     ]),
-    ("Year 1", "2023–24", [
+    ("Year 1", "2023–24", "Drawing and building", [
         ("", "Started B.E. Aerospace Engineering at RVCE"),
         ("", "Team Antariksh, the college satellite team, where I learnt SolidWorks and LaTeX"),
         ("", "Built a quadcopter and a fixed-wing aircraft with classmates, for an experiential-learning project"),
         ("July 2024", "Top Performer, Assembly Wiz CAD competition"),
     ]),
-    ("Year 2", "2024–25", [
+    ("Year 2", "2024–25", "Hardware that has to work", [
         ("2025", "Joined Ashwa Racing, engine subsystem"),
         ("2025", "1st Runner Up, Vyoma Design-a-thon"),
-        ("May–July 2025", "Variable-pitch propeller and thrust bench"),
+        ("May–July 2025", "Variable-pitch propeller and thrust bench, and my first CFD"),
         ("July 2025", "HAL Aerothon ’25"),
     ]),
-    ("Year 3", "2025–26", [
-        ("July–Sept 2025", "Research intern, DRDO Advanced Systems Laboratory"),
+    ("Year 3", "2025–26", "Simulation", [
+        ("July–Sept 2025", "Research intern, DRDO Advanced Systems Laboratory: hypersonic heating in Fluent and CFD++"),
         ("Oct 2025–Feb 2026", "STM32 cabin temperature control"),
         ("January 2026", "Formula Bharat with Ashwa Racing"),
         ("6th semester", "Double wedge, CubeSat docking, radar cross section, deaerator and conjunction screening"),
         ("June 2026", "International Certificate Course on Six Sigma"),
     ]),
-    ("Year 4", "2026–27", [
-        ("2026", "Research intern, CSIR–National Aerospace Laboratories"),
+    ("Year 4", "2026–27", "The numerics underneath", [
+        ("2026", "Research intern, CSIR–National Aerospace Laboratories: finite-difference solvers from scratch"),
         ("November 2026", "Started publishing my projects on GitHub"),
         ("", "Applying for MS programmes for autumn 2027"),
     ]),

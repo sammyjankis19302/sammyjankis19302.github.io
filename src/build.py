@@ -260,13 +260,14 @@ def build_index():
 
     # ---- path
     years = []
-    for name, span, items in C.YEARS:
+    for name, span, theme, items in C.YEARS:
         lis = "".join(f'<li>{when_span(w)}{t}</li>' for w, t in items)
-        years.append(f'<li class="year"><h3>{name}</h3><p class="span">{span}</p><ul>{lis}</ul></li>')
+        years.append(f'<li class="year"><h3>{name}</h3><p class="span">{span}</p>'
+                     f'<p class="year-theme">{theme}</p><ul>{lis}</ul></li>')
     out.append(f"""
 <section class="block" id="path" aria-labelledby="h-path">
   <div class="wrap">
-    <h2 id="h-path">How I got here</h2>
+    <h2 id="h-path">{C.PATH_TITLE}</h2>
     <div class="path-grid">
       <figure class="portrait">{img("portrait", "Portrait of Akula Uday Kiran")}</figure>
       <div class="path-text">{paras(C.PATH_TEXT)}<p class="beyond">{C.PATH_BEYOND}</p></div>
