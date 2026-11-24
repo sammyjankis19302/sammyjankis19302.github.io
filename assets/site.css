@@ -196,10 +196,8 @@ figcaption { margin-top: .7rem; font-size: .9rem; line-height: 1.5; color: var(-
 .awards li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-top: 1px solid var(--rule); }
 .awards li:first-child { border-top: 0; padding-top: 0; }
 .awards .when { font-size: .8rem; padding-top: .25rem; margin: 0; }
-.award-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.award-photos { display: grid; gap: 1.75rem; }
 .award-photos .fig { margin: 0; }
-.award-photos .fig-frame { aspect-ratio: 3 / 4; }
-.award-photos img { height: 100%; object-fit: cover; object-position: 50% 20%; }
 
 /* tools */
 .tools { margin: 1.5rem 0 0; }
@@ -230,7 +228,7 @@ figcaption { margin-top: .7rem; font-size: .9rem; line-height: 1.5; color: var(-
   .entry-meta { grid-column: 1; grid-row: 1 / span 2; padding-top: .3rem; }
   .entry-body { grid-column: 2; }
   .path-grid { grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); }
-  .awards-grid { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
+  .awards-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 }
 @media (min-width: 62rem) {
   .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }

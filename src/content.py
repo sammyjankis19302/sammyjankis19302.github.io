@@ -268,7 +268,7 @@ YEARS = [
     ("Before RVCE", "2020–23", "Teaching and mathematics", [
         ("2020–21", "Taught mathematics to Grades 1–10 at Sidda Samadhi Yoga Gurukul"),
         ("2021–22", "Trained for mathematics competitions"),
-        ("", "Started physics at SRM and at Manipal; left both for aerospace"),
+        ("", "Started a physics degree at Manipal, then left it for aerospace engineering"),
         ("2023", "Master Certificate in Product Design, CADD Centre: AutoCAD, CATIA, Ansys"),
     ]),
     ("Year 1", "2023–24", "Drawing and building", [
@@ -316,10 +316,12 @@ COMPETITIONS = [
 ]
 
 AWARD_PHOTOS = [
-    ("assemblywiz", "Uday Kiran with a medal and certificate at the Assembly Wiz competition",
-     "Assembly Wiz, July 2024."),
-    ("vyoma", "Uday Kiran receiving a certificate at the Vyoma Design-a-thon",
-     "Vyoma Design-a-thon, 2025."),
+    ("vyoma", "Uday Kiran receiving a certificate from Dr. Ravindra S Kulkarni",
+     "Receiving my certificate at the Vyoma Design-a-thon from Dr. Ravindra S Kulkarni, then Head of "
+     "Aerospace Engineering at RVCE. 2025."),
+    ("assemblywiz", "Uday Kiran receiving a medal and certificate from Dr. Shanmukha Nagaraj",
+     "Receiving the Top Performer award at Assembly Wiz from Dr. Shanmukha Nagaraj, then Dean of "
+     "Academics at RVCE. July 2024."),
 ]
 
 # ---------------------------------------------------------------- tools
