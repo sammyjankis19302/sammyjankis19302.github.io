@@ -5,7 +5,7 @@ Strings are HTML: use &nbsp; between a number and its unit, and <a href="...">..
 """
 
 BASE_URL = "https://sammyjankis19302.github.io/"
-UPDATED = "2026-11-24"          # shown in the footer and written to sitemap.xml
+UPDATED = "2026-11-25"          # shown in the footer and written to sitemap.xml
 UPDATED_TEXT = "November 2026"
 
 NAME = "Akula Uday Kiran"
@@ -17,8 +17,8 @@ TITLE = "Akula Uday Kiran – Aerospace engineering, RV College of Engineering"
 DESCRIPTION = (
     "Akula Uday Kiran is a final-year aerospace engineering student at RV College of Engineering "
     "(RVCE), Bengaluru, with research internships at CSIR–National Aerospace Laboratories and DRDO's "
-    "Advanced Systems Laboratory. Computational fluid dynamics, numerical methods and hypersonic "
-    "heating, with projects published in full as public repositories."
+    "Advanced Systems Laboratory. Computational fluid dynamics, numerical methods, hypersonic "
+    "heating and rocket propulsion, with projects published in full as public repositories."
 )
 
 NAV = [("experience", "Experience"), ("projects", "Projects"), ("path", "Four years"),
@@ -27,8 +27,8 @@ NAV = [("experience", "Experience"), ("projects", "Projects"), ("path", "Four ye
 # ---------------------------------------------------------------- hero
 LEDE = (
     "I’m a final-year aerospace engineering student at RV College of Engineering in Bengaluru. "
-    "I work on computational fluid dynamics and numerical methods, and I trust a result only once "
-    "it has survived a check that could have proved it wrong."
+    "I work on computational fluid dynamics, numerical methods and rocket propulsion, and I trust a "
+    "result only once it has survived a check that could have proved it wrong."
 )
 
 SPEC = [
@@ -99,13 +99,26 @@ EXPERIENCE = [
         "role": "Engine subsystem engineer, since 2025",
         "people": "",
         "body": [
-            "Ashwa Racing designs and builds the college’s Formula Student car. I built a model of the "
-            "cooling system of its Suzuki GSX-R600 engine and simulated its heat transfer, and I am "
-            "redesigning the intake manifold for better airflow. In January 2026 the team competed at "
-            "Formula Bharat, at the Kari Motor Speedway in Coimbatore.",
+            "Ashwa Racing designs and builds the college’s Formula Student car. In 2025 I was "
+            "responsible for the engine cooling calculation: I measured the radiator, fan and pump of its "
+            "Suzuki GSX-R600 engine, modelled the radiator in SolidWorks and wrote the heat-rejection "
+            "report. In 2026 I rebuilt it as a model of the whole coolant loop in MATLAB, with the "
+            "Simulink version generated entirely by script. I am also redesigning the intake manifold for "
+            "better airflow. In January 2026 the team competed at Formula Bharat, at the Kari Motor "
+            "Speedway in Coimbatore.",
         ],
-        "results": [],
-        "repo": None,
+        "results": [
+            "Over a 22&nbsp;km endurance run built to the Formula SAE rules, in 31&nbsp;°C air, the coolant "
+            "peaks at 93.9&nbsp;°C and the fan never switches on, provided the duct brings 30&nbsp;% of the "
+            "car’s speed to the core. At 15&nbsp;% the coolant would settle at 107&nbsp;°C, above the "
+            "105&nbsp;°C limit.",
+            "Checked line by line, my 2025 report reached the right conclusion with the wrong numbers: "
+            "300&nbsp;CFM of air can carry at most 11.8&nbsp;kW, about half the 23.3&nbsp;kW the report "
+            "credited the radiator with.",
+            "The script-built Simulink model matches the plain MATLAB version to within "
+            "4&nbsp;×&nbsp;10<sup>−13</sup>&nbsp;K at all 17,261 time steps of the event.",
+        ],
+        "repo": "formula-student-radiator-cooling",
         "photo": ("ashwa", "Uday Kiran beside a Formula Student car in the Ashwa Racing workshop",
                   "In the Ashwa Racing workshop, February 2025."),
     },
@@ -119,6 +132,28 @@ PROJECTS_INTRO = (
 )
 
 PROJECTS_LEAD = [
+    {
+        "title": "Turbopumps and nozzle for a Raptor-class rocket engine",
+        "context": "Independent design study, 2025, completed in November 2026",
+        "guide": "",
+        "body": [
+            "A 2&nbsp;MN full-flow staged-combustion engine burning liquid oxygen and methane, in the class "
+            "of SpaceX’s Raptor. In 2025 I sized its nozzle with RPA, ran the nozzle in ANSYS Fluent and "
+            "modelled both turbopumps in CFturbo. In 2026 I finished it in Python: equilibrium chemistry "
+            "with Cantera, real-fluid properties with CoolProp, a power balance of the cycle and meanline "
+            "sizing of the pumps and turbines.",
+            "A published estimate of Raptor’s cycle, the one the turbopumps were built around, does not "
+            "close: its methane turbine delivers 20.4&nbsp;MW to a pump that needs 28&nbsp;MW. Keeping its "
+            "pressures, the shafts balance with the preburners at 708&nbsp;K and 897&nbsp;K instead of "
+            "811&nbsp;K, and the 300&nbsp;bar thrust chamber gives 2.04&nbsp;MN at 333&nbsp;s at sea level. "
+            "Checking the 2025 turbopumps against that cycle found eight problems, from a turbine designed "
+            "for its exit conditions to a methane pump 34&nbsp;% short of head. The repository lists them all.",
+        ],
+        "repo": "raptor-class-engine-design",
+        "figure": ("fig-raptor", "Flow schematic of the engine: two pumps, two preburners, two turbines and the main chamber",
+                   "The balanced cycle. Each turbine drives its own pump; the oxygen-rich preburner runs at "
+                   "708&nbsp;K and the fuel-rich one at 897&nbsp;K."),
+    },
     {
         "title": "Roughness and the oblique shock on a supersonic double wedge",
         "context": "Gas Dynamics lab project, 6th semester, four students",
@@ -248,14 +283,16 @@ PATH_TITLE = "Four years at RVCE"
 PATH_TEXT = [
     "My four years at RVCE have taken the work steadily deeper. In the first year I learnt to draw and "
     "model parts, and built a quadcopter and a fixed-wing aircraft with classmates. In the second I built "
-    "hardware that had to work on a bench, a variable-pitch propeller and its thrust stand, and joined the "
-    "engine subsystem of our Formula Student team.",
+    "hardware that had to work on a bench, a variable-pitch propeller and its thrust stand, joined the "
+    "engine subsystem of our Formula Student team, where I worked on the radiator, and began a design "
+    "study of a rocket engine’s turbopumps and nozzle.",
     "In the third year I moved to simulation: hypersonic stagnation heating at DRDO, then shocks over a "
     "rough double wedge, a rotating porous deaerator, the dynamics of CubeSat docking, radar scattering "
     "from aircraft shapes and satellite conjunction screening in my sixth-semester projects.",
     "In the fourth I went to the methods underneath. At CSIR–NAL I wrote finite-difference solvers from "
     "the discretisation up and learnt to predict a scheme’s error before measuring it. Since November "
-    "2026 I have been publishing every project in full, including what went wrong.",
+    "2026 I have been publishing every project in full, including what went wrong, and finishing the "
+    "two I had left undone: the rocket engine study and the radiator model.",
 ]
 
 PATH_BEYOND = (
@@ -280,7 +317,9 @@ YEARS = [
     ("Year 2", "2024–25", "Hardware that has to work", [
         ("2025", "Joined Ashwa Racing, engine subsystem"),
         ("2025", "1st Runner Up, Vyoma Design-a-thon"),
+        ("April–Aug 2025", "Raptor-class engine study: nozzle in RPA and Fluent, turbopumps in CFturbo"),
         ("May–July 2025", "Variable-pitch propeller and thrust bench, and my first CFD"),
+        ("July 2025", "Radiator measurements and cooling report for Ashwa Racing"),
         ("July 2025", "HAL Aerothon ’25"),
     ]),
     ("Year 3", "2025–26", "Simulation", [
@@ -293,6 +332,7 @@ YEARS = [
     ("Year 4", "2026–27", "The numerics underneath", [
         ("2026", "Research intern, CSIR–National Aerospace Laboratories: finite-difference solvers from scratch"),
         ("November 2026", "Started publishing my projects on GitHub"),
+        ("November 2026", "Finished the rocket engine study and the radiator model"),
         ("", "Applying for MS programmes for autumn 2027"),
     ]),
 ]
@@ -337,8 +377,10 @@ TOOLS = [
     ("Numerical methods", "Finite-difference and finite-volume schemes; von Neumann stability, order of "
                           "accuracy and convergence; modified-equation and spectral analysis of numerical error"),
     ("Programming", "Python (NumPy, SciPy, Matplotlib, PyTorch), C, MATLAB, Bash, Git, LaTeX, gnuplot"),
+    ("Propulsion", "RPA, CFturbo, Cantera and CoolProp: equilibrium chemistry, nozzle design, cycle "
+                   "power balance and meanline turbomachinery"),
     ("Structures and systems", "ANSYS Mechanical, APDL and Explicit Dynamics, Nastran/Patran, STK, HFSS, "
-                               "RPA, CFturbo, Simulink"),
+                               "Simulink"),
     ("Design and making", "SolidWorks, CATIA, Fusion, FreeCAD; CNC and lathe machining, casting, FDM and "
                           "SLA 3D printing; Arduino and STM32"),
 ]
