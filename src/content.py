@@ -133,28 +133,6 @@ PROJECTS_INTRO = (
 
 PROJECTS_LEAD = [
     {
-        "title": "Turbopumps and nozzle for a Raptor-class rocket engine",
-        "context": "Independent design study, 2025, completed in November 2026",
-        "guide": "",
-        "body": [
-            "A 2&nbsp;MN full-flow staged-combustion engine burning liquid oxygen and methane, in the class "
-            "of SpaceX’s Raptor. In 2025 I sized its nozzle with RPA, ran the nozzle in ANSYS Fluent and "
-            "modelled both turbopumps in CFturbo. In 2026 I finished it in Python: equilibrium chemistry "
-            "with Cantera, real-fluid properties with CoolProp, a power balance of the cycle and meanline "
-            "sizing of the pumps and turbines.",
-            "A published estimate of Raptor’s cycle, the one the turbopumps were built around, does not "
-            "close: its methane turbine delivers 20.4&nbsp;MW to a pump that needs 28&nbsp;MW. Keeping its "
-            "pressures, the shafts balance with the preburners at 708&nbsp;K and 897&nbsp;K instead of "
-            "811&nbsp;K, and the 300&nbsp;bar thrust chamber gives 2.04&nbsp;MN at 333&nbsp;s at sea level. "
-            "Checking the 2025 turbopumps against that cycle found eight problems, from a turbine designed "
-            "for its exit conditions to a methane pump 34&nbsp;% short of head. The repository lists them all.",
-        ],
-        "repo": "raptor-class-engine-design",
-        "figure": ("fig-raptor", "Flow schematic of the engine: two pumps, two preburners, two turbines and the main chamber",
-                   "The balanced cycle. Each turbine drives its own pump; the oxygen-rich preburner runs at "
-                   "708&nbsp;K and the fuel-rich one at 897&nbsp;K."),
-    },
-    {
         "title": "Roughness and the oblique shock on a supersonic double wedge",
         "context": "Gas Dynamics lab project, 6th semester, four students",
         "guide": "Guided by Bhaskar K",
@@ -208,6 +186,29 @@ PROJECTS_LEAD = [
         "figure": ("fig-rcs", "Top, side and front views of four faceted aircraft models",
                    "Top, side and front views of the four aircraft: conventional, stealth, flying wing and "
                    "chined nose, each made of 18 to 32 flat facets."),
+    },
+    {
+        "title": "Turbopumps and nozzle for a Raptor-class rocket engine",
+        "context": "Independent design study, 2025, completed in November 2026",
+        "guide": "",
+        "body": [
+            "A 2&nbsp;MN full-flow staged-combustion engine burning liquid oxygen and methane, in the class "
+            "of SpaceX’s Raptor. In 2025 I sized its nozzle with RPA, ran the nozzle in ANSYS Fluent and "
+            "modelled both turbopumps in CFturbo. In 2026 I finished it in Python: equilibrium chemistry "
+            "with Cantera, real-fluid properties with CoolProp, a power balance of the cycle and meanline "
+            "sizing of the pumps and turbines. It is a design study, checked against RPA and "
+            "one-dimensional theory rather than against test data.",
+            "A published estimate of Raptor’s cycle, the one the turbopumps were built around, does not "
+            "close: its methane turbine delivers 20.4&nbsp;MW to a pump that needs 28&nbsp;MW. Keeping its "
+            "pressures, the shafts balance with the preburners at 708&nbsp;K and 897&nbsp;K instead of "
+            "811&nbsp;K, and the 300&nbsp;bar thrust chamber gives 2.04&nbsp;MN at 333&nbsp;s at sea level. "
+            "Checking the 2025 turbopumps against that cycle found eight problems, from a turbine designed "
+            "for its exit conditions to a methane pump 34&nbsp;% short of head. The repository lists them all.",
+        ],
+        "repo": "raptor-class-engine-design",
+        "figure": ("fig-raptor", "Flow schematic of the engine: two pumps, two preburners, two turbines and the main chamber",
+                   "The balanced cycle. Each turbine drives its own pump; the oxygen-rich preburner runs at "
+                   "708&nbsp;K and the fuel-rich one at 897&nbsp;K."),
     },
 ]
 
