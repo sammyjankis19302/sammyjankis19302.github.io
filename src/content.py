@@ -12,6 +12,7 @@ NAME = "Akula Uday Kiran"
 EMAIL = "sammyjankis19302@gmail.com"
 GITHUB = "https://github.com/sammyjankis19302"
 LINKEDIN = "https://www.linkedin.com/in/akulaudaykiran19302/"
+CV = "Akula_Uday_Kiran_CV.pdf"
 
 TITLE = "Akula Uday Kiran – Aerospace engineering, RV College of Engineering"
 DESCRIPTION = (
@@ -387,6 +388,6 @@ TOOLS = [
 
 # ---------------------------------------------------------------- contact
 CONTACT_TEXT = (
-    "The best way to reach me is by email. I am also on "
+    f"The best way to reach me is by email. My <a href=\"{CV}\">CV</a> is here as a PDF, and I am also on "
     f"<a href=\"{LINKEDIN}\">LinkedIn</a> and <a href=\"{GITHUB}\">GitHub</a>."
 )

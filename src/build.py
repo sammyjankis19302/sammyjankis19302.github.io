@@ -179,6 +179,7 @@ def build_index():
         <li><a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>
         <li><a href="{C.LINKEDIN}">LinkedIn</a></li>
         <li><a href="{C.GITHUB}">GitHub</a></li>
+        <li><a href="{C.CV}">CV (PDF)</a></li>
       </ul>
       <dl class="spec">{spec}</dl>
     </div>
