@@ -306,7 +306,6 @@ YEARS = [
     ("Before RVCE", "2020–23", "Teaching and mathematics", [
         ("2020–21", "Taught mathematics to Grades 1–10 at Sidda Samadhi Yoga Gurukul"),
         ("2021–22", "Trained for mathematics competitions"),
-        ("", "Started a physics degree at Manipal, then left it for aerospace engineering"),
         ("2023", "Master Certificate in Product Design, CADD Centre: AutoCAD, CATIA, Ansys"),
     ]),
     ("Year 1", "2023–24", "Drawing and building", [
